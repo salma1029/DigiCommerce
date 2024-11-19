@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  >
+
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/backgroundImage"
+            app:layout_constraintGuide_percent=".09" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/backgroundImage"
+            app:layout_constraintGuide_percent=".91" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegistertop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/backgroundImage"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grayish_brown"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineRegistertop" />
+
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/create_account"
+            android:textColor="@color/grayish_brown"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineRegistertop"
+            />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/description_sign_up"
+            android:textColor="@color/medium_gray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+
+
+        <EditText
+            android:id="@+id/edFirstNameRegister"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/g_gray500"
+            android:hint="@string/g_first_name"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+
+            android:textColor="@color/medium_gray"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <EditText
+                android:id="@+id/edLastNameRegister"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:hint="@string/g_last_name"
+               android:textColorHint="@color/g_gray500"
+               app:layout_constraintTop_toBottomOf="@id/edFirstNameRegister"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+                app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft"
+                android:inputType="textPersonName"
+                android:textColor="@color/medium_gray" />
+
+            <EditText
+                android:id="@+id/edEmailRegister"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:hint="@string/g_email"
+                android:textColorHint="@color/g_gray500"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/edLastNameRegister"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+                app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft"
+                android:textColor="@color/medium_gray" />
+
+
+            <EditText
+                android:id="@+id/edPasswordRegister"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:hint="@string/g_password"
+                android:textColorHint="@color/g_gray500"
+                android:textColor="@color/medium_gray"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/edEmailRegister"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+                app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft"
+              />
+
+
+            <EditText
+                android:id="@+id/edConfirmPasswordRegister"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:hint="@string/confirm_password"
+                android:textColor="@color/medium_gray"
+                android:inputType="textPassword"
+                android:textColorHint="@color/g_gray500"
+                app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+                app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft"
+                />
+
+
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/buttonRegisterRegister"
+                style="@style/brownButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/sign_up"
+                app:spinning_bar_color="@color/white"
+                tools:layout_editor_absoluteY="476dp"
+                app:layout_constraintTop_toBottomOf="@id/edConfirmPasswordRegister"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRegisterRight"
+                app:layout_constraintStart_toEndOf="@id/guidelineRegisterLeft" />
+
+
+
+
+        <TextView
+            android:id="@+id/de_HavaAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/already_have_an_account"
+            android:textAlignment="center"
+            android:textColor="@color/medium_gray"
+            android:textSize="15sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister"
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            tools:layout_editor_absoluteY="652dp" />
+
+        <TextView
+            android:id="@+id/tvHavaAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/grayish_brown"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister"
+            app:layout_constraintStart_toEndOf="@+id/de_HavaAccount"
+            tools:layout_editor_absoluteY="652dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+ </FrameLayout>
