@@ -21,6 +21,8 @@
 
 ## **About the Project**
 DigiCommerce is a **furniture e-commerce app** designed to offer users a smooth online shopping experience. With a modern UI and clean code structure, this app makes it easy to browse furniture collections, add items to the cart, and complete purchases. Built using **Kotlin**, DigiCommerce demonstrates best practices in Android development, including **MVVM architecture**, **ViewModel**, and **LiveData**.
+Project presentation link :
+   (https://www.canva.com/design/DAGUaoyPn9E/j7qjq8xYRfNTDr87uhBFYg/edit?utm_content=DAGUaoyPn9E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
